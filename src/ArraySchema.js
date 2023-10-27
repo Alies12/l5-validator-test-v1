@@ -1,0 +1,19 @@
+export class ArraySchema{
+    constructor(number = +Infinity){
+        this.leng = number
+    }
+    isValid(argument){
+        if(argument === null) {
+            return false
+        } 
+        if(this.leng !== +Infinity){
+            return typeof argument === 'object' && argument.length === this.leng
+        } else {
+            return typeof argument === 'object'
+        }
+    }
+    length(argument){
+        return new ArraySchema(argument)
+
+    }
+}
