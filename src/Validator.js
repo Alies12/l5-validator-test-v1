@@ -1,18 +1,18 @@
-import { ArraySchema } from "./ArraySchema.js"
-import { NumberValidator } from "./NumberSchema.js"
-import { Objectschema } from "./ObjectSchema.js"
-export default class Validator {  
+/* eslint-disable */
+import ArraySchema from './ArraySchema.js';
+import NumberValidator from './NumberSchema.js';
+import Objectschema from './ObjectSchema.js';
 
- number() {
-    return new NumberValidator()
- }
+export default class Validator {
+  number() {
+    return new NumberValidator();
+  }
 
- array() {
-    return new ArraySchema()
+  array() {
+    return new ArraySchema();
+  }
 
- }
- object() {
-   return new Objectschema()
-
- }
+  object() {
+    return new Objectschema();
+  }
 }
